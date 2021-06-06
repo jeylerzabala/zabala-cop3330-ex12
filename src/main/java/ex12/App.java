@@ -1,6 +1,10 @@
 package ex12;
 
 /*
+
+*  UCF COP3330 Summer 2021 Assignment 1 Solution
+*  Copyright 2021 Jeyler Zabala
+
 Exercise 12 - Computing Simple Interest
 Computing simple interest is a great way to quickly figure out whether an investment has value.
 It’s also a good way to get comfortable with explicitly coding the order of operations in your programs.
@@ -17,10 +21,12 @@ Enter the principal: 1500
 Enter the rate of interest: 4.3
 Enter the number of years: 4
 After 4 years at 4.3%, the investment will be worth $1758.
+
 Constraints
 Prompt for the rate as a percentage (like 15, not .15). Divide the input by 100 in your program.
 Ensure that fractions of a cent are rounded up to the next penny.
 Ensure that the output is formatted as money.
+
 Challenges
 Ensure that the values entered for principal, rate,
 and number of years are numeric and that the program will not let the user proceed without valid inputs.
@@ -41,11 +47,9 @@ public class App {
         System.out.print("Enter the principal: ");
         principal = sc.nextDouble();
 
-        Scanner sc2 = new Scanner(System.in);
         System.out.print("Enter the rate of interest: ");
         interestRate = sc.nextDouble();
 
-        Scanner sc3 = new Scanner(System.in);
         System.out.print("Enter the number of years: ");
         years = sc.nextInt();
 
