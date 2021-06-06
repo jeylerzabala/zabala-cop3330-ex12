@@ -29,5 +29,33 @@ and number of years and returns the amount at the end of the investment.
 In addition to printing out the final amount, print out the amount at the end of each year.
 */
 
+import java.util.Scanner;
+
 public class App {
+    public static void main(String[] args) {
+
+        int years;
+        double principal, interestRate, amount, roundedAmount;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the principal: ");
+        principal = sc.nextDouble();
+
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("Enter the rate of interest: ");
+        interestRate = sc.nextDouble();
+
+        Scanner sc3 = new Scanner(System.in);
+        System.out.print("Enter the number of years: ");
+        years = sc.nextInt();
+
+        amount = principal * (1 + (interestRate/100 * years ));
+
+        roundedAmount = ((int) ((amount * 100.0) + ((amount < 0.0) ? -0.5 : 0.5))) / 100.0;
+
+        String strRoundedAmount = String.format("%.2f", roundedAmount);
+
+        String output = String.format("After %s years at %s%%, the investment will be worth $%s.", years, interestRate, strRoundedAmount);
+        System.out.println(output);
+    }
 }
